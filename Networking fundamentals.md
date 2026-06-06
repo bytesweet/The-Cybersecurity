@@ -1,3 +1,5 @@
+                                                                        OSI Model and Where Attacks Happen at Each Layer
+
 What is the OSI Model?
   The OSI (Open Systems Interconnection) Model is a framework that describes how data moves across a network.
 
@@ -33,10 +35,10 @@ Purpose: Provides network services directly to applications used by users.
 Examples: HTTP, HTTPS, FTP, DNS, SMTP
 
 Common Attacks:
-  SQL Injection (SQLi)
-  Cross-Site Scripting (XSS)
-  Phishing
-  Command Injection
+  SQL Injection (SQLi),
+  Cross-Site Scripting (XSS),
+  Phishing,
+  Command Injection,
 
 Attack Goal: Steal data, bypass authentication, or execute malicious code.
 
@@ -51,9 +53,9 @@ Purpose: Handles data formatting, encryption, decryption, and compression.
 Examples: SSL/TLS, JPEG, PNG, MP4
 
 Common Attacks:
-  SSL Stripping
-  Certificate Spoofing
-  Weak Encryption Exploitation
+  SSL Stripping,
+  Certificate Spoofing,
+  Weak Encryption Exploitation,
 
 Attack Goal: Bypass encryption and read protected data.
 
@@ -66,9 +68,9 @@ Layer 5 – Session
 Purpose: Establishes, manages, and terminates communication sessions.
 
 Common Attacks:
-  Session Hijacking
-  Session Replay
-  Session Fixation
+  Session Hijacking,
+  Session Replay,
+  Session Fixation,
 
 Attack Goal: Take control of an authenticated user's session.
 
@@ -83,9 +85,9 @@ Purpose: Provides reliable end-to-end communication.
 Protocols: TCP, UDP
 
 Common Attacks:
-  SYN Flood
-  UDP Flood
-  TCP Reset Attack
+  SYN Flood,
+  UDP Flood,
+  TCP Reset Attack,
 
 Attack Goal: Disrupt services or exhaust server resources.
 
@@ -100,10 +102,10 @@ Purpose: Handles logical addressing and packet routing.
 Protocols: IP, ICMP, IPSec
 
 Common Attacks:
-  IP Spoofing
-  ICMP Flood
-  Smurf Attack
-  Routing Attacks
+  IP Spoofing,
+  ICMP Flood,
+  Smurf Attack,
+  Routing Attacks,
 
 Attack Goal: Hide the attacker's identity or manipulate network traffic.
 
@@ -118,9 +120,9 @@ Purpose: Provides communication between devices on the same local network.
 Protocols: Ethernet, ARP, MAC
 
 Common Attacks:
-  ARP Spoofing
-  MAC Flooding
-  VLAN Hopping
+  ARP Spoofing,
+  MAC Flooding,
+  VLAN Hopping,
 
 Attack Goal: Intercept, redirect, or monitor local network traffic.
 
@@ -135,10 +137,10 @@ Purpose: Handles the physical transmission of data through hardware and media.
 Examples: Network Cables, Fiber Optics, Wireless Signals, Network Devices
 
 Common Attacks:
-  Cable Tapping
-  Signal Jamming
-  Hardware Theft
-  Device Tampering
+  Cable Tapping,
+  Signal Jamming,
+  Hardware Theft,
+  Device Tampering,
 
 Attack Goal: Gain physical access to data or disrupt communications.
 
@@ -147,7 +149,7 @@ Real-World Scenario: An attacker connects a device to a network cable to capture
 
 ###############################################################################################################################
 
-TCP/IP Stack: IP Addressing, Subnetting, and CIDR
+                                                                          TCP/IP Stack: IP Addressing, Subnetting, and CIDR
 
 Definition
 
