@@ -1,14 +1,13 @@
 What is the OSI Model?
-The OSI (Open Systems Interconnection) Model is a framework that describes how data moves across a network.
+  The OSI (Open Systems Interconnection) Model is a framework that describes how data moves across a network.
 
 Instead of treating communication as one large process, the OSI Model divides it into 7 layers, each with a specific responsibility.
 
 Think of it like sending a package:
-
-You write the message.
-You put it in a box.
-A shipping company transports it.
-The recipient receives and opens it.
+  You write the message.
+  You put it in a box.
+  A shipping company transports it.
+  The recipient receives and opens it.
 
 Network communication works similarly.
 
@@ -29,154 +28,121 @@ The 7 Layers of the OSI Model
 
 Layer 7 – Application
 
-Purpose:
-Provides network services directly to applications used by users.
+Purpose: Provides network services directly to applications used by users.
 
-Examples:
-HTTP, HTTPS, FTP, DNS, SMTP
+Examples: HTTP, HTTPS, FTP, DNS, SMTP
 
 Common Attacks:
+  SQL Injection (SQLi)
+  Cross-Site Scripting (XSS)
+  Phishing
+  Command Injection
 
-SQL Injection (SQLi)
-Cross-Site Scripting (XSS)
-Phishing
-Command Injection
+Attack Goal: Steal data, bypass authentication, or execute malicious code.
 
-Attack Goal:
-Steal data, bypass authentication, or execute malicious code.
-
-Real-World Scenario:
-An attacker exploits a vulnerable website login form to gain access to sensitive user information.
+Real-World Scenario: An attacker exploits a vulnerable website login form to gain access to sensitive user information.
 
 --------------------------------------------
 
 Layer 6 – Presentation
 
-Purpose:
-Handles data formatting, encryption, decryption, and compression.
+Purpose: Handles data formatting, encryption, decryption, and compression.
 
-Examples:
-SSL/TLS, JPEG, PNG, MP4
+Examples: SSL/TLS, JPEG, PNG, MP4
 
 Common Attacks:
+  SSL Stripping
+  Certificate Spoofing
+  Weak Encryption Exploitation
 
-SSL Stripping
-Certificate Spoofing
-Weak Encryption Exploitation
+Attack Goal: Bypass encryption and read protected data.
 
-Attack Goal:
-Bypass encryption and read protected data.
-
-Real-World Scenario:
-An attacker intercepts a secure connection and forces it to use an insecure protocol.
+Real-World Scenario: An attacker intercepts a secure connection and forces it to use an insecure protocol.
 
 ------------------------------------------
 
 Layer 5 – Session
 
-Purpose:
-Establishes, manages, and terminates communication sessions.
+Purpose: Establishes, manages, and terminates communication sessions.
 
 Common Attacks:
+  Session Hijacking
+  Session Replay
+  Session Fixation
 
-Session Hijacking
-Session Replay
-Session Fixation
+Attack Goal: Take control of an authenticated user's session.
 
-Attack Goal:
-Take control of an authenticated user's session.
+Real-World Scenario: An attacker steals a session cookie and gains access to a user's account without knowing the password.
 
-Real-World Scenario:
-An attacker steals a session cookie and gains access to a user's account without knowing the password.
 -------------------------------------
 
 Layer 4 – Transport
 
-Purpose:
-Provides reliable end-to-end communication.
+Purpose: Provides reliable end-to-end communication.
 
-Protocols:
-TCP, UDP
+Protocols: TCP, UDP
 
 Common Attacks:
+  SYN Flood
+  UDP Flood
+  TCP Reset Attack
 
-SYN Flood
-UDP Flood
-TCP Reset Attack
+Attack Goal: Disrupt services or exhaust server resources.
 
-Attack Goal:
-Disrupt services or exhaust server resources.
-
-Real-World Scenario:
-A server becomes unavailable after receiving a massive number of fake connection requests.
+Real-World Scenario: A server becomes unavailable after receiving a massive number of fake connection requests.
 
 -----------------------------------
 
 Layer 3 – Network
 
-Purpose:
-Handles logical addressing and packet routing.
+Purpose: Handles logical addressing and packet routing.
 
-Protocols:
-IP, ICMP, IPSec
+Protocols: IP, ICMP, IPSec
 
 Common Attacks:
+  IP Spoofing
+  ICMP Flood
+  Smurf Attack
+  Routing Attacks
 
-IP Spoofing
-ICMP Flood
-Smurf Attack
-Routing Attacks
+Attack Goal: Hide the attacker's identity or manipulate network traffic.
 
-Attack Goal:
-Hide the attacker's identity or manipulate network traffic.
-
-Real-World Scenario:
-An attacker uses a fake IP address to disguise the source of malicious traffic.
+Real-World Scenario: An attacker uses a fake IP address to disguise the source of malicious traffic.
 
 ------------------------------------
 
 Layer 2 – Data Link
 
-Purpose:
-Provides communication between devices on the same local network.
+Purpose: Provides communication between devices on the same local network.
 
-Protocols:
-Ethernet, ARP, MAC
+Protocols: Ethernet, ARP, MAC
 
 Common Attacks:
+  ARP Spoofing
+  MAC Flooding
+  VLAN Hopping
 
-ARP Spoofing
-MAC Flooding
-VLAN Hopping
+Attack Goal: Intercept, redirect, or monitor local network traffic.
 
-Attack Goal:
-Intercept, redirect, or monitor local network traffic.
-
-Real-World Scenario:
-An attacker tricks devices into sending traffic through their machine, allowing them to monitor communications.
+Real-World Scenario: An attacker tricks devices into sending traffic through their machine, allowing them to monitor communications.
 
 ---------------------------------------
 
 Layer 1 – Physical
 
-Purpose:
-Handles the physical transmission of data through hardware and media.
+Purpose: Handles the physical transmission of data through hardware and media.
 
-Examples:
-Network Cables, Fiber Optics, Wireless Signals, Network Devices
+Examples: Network Cables, Fiber Optics, Wireless Signals, Network Devices
 
 Common Attacks:
-
   Cable Tapping
   Signal Jamming
   Hardware Theft
   Device Tampering
 
-Attack Goal:
-  Gain physical access to data or disrupt communications.
+Attack Goal: Gain physical access to data or disrupt communications.
 
-Real-World Scenario:
-  An attacker connects a device to a network cable to capture transmitted traffic
+Real-World Scenario: An attacker connects a device to a network cable to capture transmitted traffic
 
 
 ###############################################################################################################################
