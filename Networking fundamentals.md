@@ -1,4 +1,4 @@
-                                                                        OSI Model and Where Attacks Happen at Each Layer
+                                                       OSI Model and Where Attacks Happen at Each Layer
 
 What is the OSI Model?
   The OSI (Open Systems Interconnection) Model is a framework that describes how data moves across a network.
@@ -149,7 +149,7 @@ Real-World Scenario: An attacker connects a device to a network cable to capture
 
 ###############################################################################################################################
 
-                                                                          TCP/IP Stack: IP Addressing, Subnetting, and CIDR
+                                                        TCP/IP Stack: IP Addressing, Subnetting, and CIDR
 
 Definition
 
