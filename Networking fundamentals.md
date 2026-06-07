@@ -15,16 +15,16 @@ Network communication works similarly.
 
 --------------------------------------------
 
-The 7 Layers of the OSI Model
-| Layer | Name         |
-| ----- | ------------ |
-| 7     | Application  |
-| 6     | Presentation |
-| 5     | Session      |
-| 4     | Transport    |
-| 3     | Network      |
-| 2     | Data Link    |
-| 1     | Physical     |
+    The 7 Layers of the OSI Model
+    | Layer | Name         |
+    | ----- | ------------ |
+    | 7     | Application  |
+    | 6     | Presentation |
+    | 5     | Session      |
+    | 4     | Transport    |
+    | 3     | Network      |
+    | 2     | Data Link    |
+    | 1     | Physical     |
 
 -------------------------------------
 
@@ -157,12 +157,12 @@ The TCP/IP Stack is the networking model used by the Internet. It defines how de
 
 TCP/IP Layers
 
-| Layer          | Function                           |
-| -------------- | ---------------------------------- |
-| Application    | User-facing network services       |
-| Transport      | End-to-end communication (TCP/UDP) |
-| Internet       | Routing and IP addressing          |
-| Network Access | Physical network communication     |
+    | Layer          | Function                           |
+    | -------------- | ---------------------------------- |
+    | Application    | User-facing network services       |
+    | Transport      | End-to-end communication (TCP/UDP) |
+    | Internet       | Routing and IP addressing          |
+    | Network Access | Physical network communication     |
 
 -------------------------------------------------------------
 
@@ -246,16 +246,17 @@ CIDR Notation
     The number after "/" indicates how many bits belong to the network portion.
 
 Common CIDR Values
-| CIDR | Subnet Mask     | Usable Hosts |
-| ---- | --------------- | ------------ |
-| /8   | 255.0.0.0       | 16,777,214   |
-| /16  | 255.255.0.0     | 65,534       |
-| /24  | 255.255.255.0   | 254          |
-| /25  | 255.255.255.128 | 126          |
-| /26  | 255.255.255.192 | 62           |
-| /27  | 255.255.255.224 | 30           |
-| /28  | 255.255.255.240 | 14           |
-| /30  | 255.255.255.252 | 2            |
+
+    | CIDR | Subnet Mask     | Usable Hosts |
+    | ---- | --------------- | ------------ |
+    | /8   | 255.0.0.0       | 16,777,214   |
+    | /16  | 255.255.0.0     | 65,534       |
+    | /24  | 255.255.255.0   | 254          |
+    | /25  | 255.255.255.128 | 126          |
+    | /26  | 255.255.255.192 | 62           |
+    | /27  | 255.255.255.224 | 30           |
+    | /28  | 255.255.255.240 | 14           |
+    | /30  | 255.255.255.252 | 2            |
 
 Example
   Network: 192.168.1.0/24
@@ -308,16 +309,16 @@ It allows both devices to confirm that they are ready to communicate.
 
 How It Works
 
-  Client                         Server
+    Client                         Server
+    
+    SYN -------------------------->
+    
+          <---------------- SYN-ACK
+    
+    ACK -------------------------->
   
-  SYN -------------------------->
+  Connection Established
   
-        <---------------- SYN-ACK
-  
-  ACK -------------------------->
-
-Connection Established
-
 -----------------------------------------
 
 Step 1: SYN
@@ -356,19 +357,20 @@ TIME-WAIT : TCP waits for a short period to ensure all packets have arrived.
 CLOSED : The connection is fully terminated.
 
 Simplified Lifecycle
-  LISTEN
-     ↓
-  SYN-SENT
-     ↓
-  SYN-RECEIVED
-     ↓
-  ESTABLISHED
-     ↓
-  FIN-WAIT
-     ↓
-  TIME-WAIT
-     ↓
-  CLOSED
+
+    LISTEN
+       ↓
+    SYN-SENT
+       ↓
+    SYN-RECEIVED
+       ↓
+    ESTABLISHED
+       ↓
+    FIN-WAIT
+       ↓
+    TIME-WAIT
+       ↓
+    CLOSED
 
 -------------------------------------------------------------------------------
 
@@ -381,15 +383,15 @@ It simply says: "End this connection right now."
 
 Normal Connection Close
 
-  Client                    Server
-  
-  FIN --------------------->
-  
-       <---------------- ACK
-  
-       <---------------- FIN
-  
-  ACK --------------------->
+    Client                    Server
+    
+    FIN --------------------->
+    
+         <---------------- ACK
+    
+         <---------------- FIN
+    
+    ACK --------------------->
 
 The connection closes gracefully.
 
@@ -397,9 +399,9 @@ The connection closes gracefully.
 
 RST Close
   
-  Client                    Server
-  
-  RST --------------------->
+    Client                    Server
+    
+    RST --------------------->
 
 The connection closes immediately.
 
@@ -412,10 +414,10 @@ The devices believe the reset packet is legitimate and immediately close the con
 
 How It Works
 
-  Client <===========> Server
-             ↑
-             |
-         Fake RST
+    Client <===========> Server
+               ↑
+               |
+           Fake RST
 
 Result : Connection Closed
 
@@ -457,25 +459,26 @@ What is DNS Resolution?
   DNS Resolution is the process of converting a domain name into an IP address.
 
 How It Works
-  User
-    |
-    v
-  google.com
-    |
-    v
-  DNS Resolver
-    |
-    v
-  Root Server
-    |
-    v
-  TLD Server (.com)
-    |
-    v
-  Authoritative DNS Server
-    |
-    v
-  IP Address Returned
+
+    User
+      |
+      v
+    google.com
+      |
+      v
+    DNS Resolver
+      |
+      v
+    Root Server
+      |
+      v
+    TLD Server (.com)
+      |
+      v
+    Authoritative DNS Server
+      |
+      v
+    IP Address Returned
 
   --------------------------------------------------------------------------------------
 
@@ -631,7 +634,203 @@ Use Trusted DNS Servers
 Keep DNS Servers Updated
   Apply security patches regularly.
 
-33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+##############################################################################################################
+
+                                                    HTTP/HTTPS and TLS Handshake Internals
+What is HTTP?
+  HTTP (HyperText Transfer Protocol) is the protocol used to transfer data between a web browser and a web server.
+When you visit a website, your browser uses HTTP to request web pages, images, videos, and other content.
+
+Example
+  Browser  ---- HTTP Request ---->  Server
+  Browser  <--- HTTP Response ----  Server
+
+Problem with HTTP
+  HTTP sends data in plain text. 
+
+Anyone who intercepts the traffic can read: Usernames, Passwords,Messages, Credit card information
+
+Example : User → Password123
+
+An attacker monitoring the network can see the password.
+
+-----------------------------------------------------------------------------------------------
+
+What is HTTPS?
+  HTTPS (HyperText Transfer Protocol Secure) is HTTP protected by TLS (Transport Layer Security).
+HTTPS encrypts communication between the browser and server.
+
+Example
+  Browser  <-- Encrypted Data -->  Server
+
+Even if someone intercepts the traffic, they cannot easily read it.
+
+What is TLS?
+  TLS (Transport Layer Security) is the protocol that provides: 
+    Encryption, 
+    Authentication, 
+    Data Integrity
+    
+TLS is what makes HTTPS secure.
+
+How HTTPS Works
+
+When you visit: https://example.com
+
+Two things happen:
+  Step 1
+  A TLS Handshake creates a secure connection.
+  
+  Step 2
+  HTTP traffic is sent through that encrypted connection.
+  
+-----------------------------------------------------------------------------------------------
+
+TLS Handshake
+What is a TLS Handshake?
+    A TLS Handshake is the process used by a browser and server to:
+        Verify identities,
+        Exchange cryptographic information,
+        Create encryption keys
+        
+Before any secure data is exchanged.
+
+Simplified TLS Handshake
+
+    Browser                           Server
+    
+    Client Hello -------------------->
+    
+                         <------------ Server Hello
+    
+                         <------------ Certificate
+    
+    Key Exchange -------------------->
+    
+    Secure Connection Created
+    
+    Encrypted Data <===============> Encrypted Data
+
+Step 1: Client Hello
+
+    The browser says: 
+        "I want a secure connection."
+
+    It sends:
+        Supported TLS versions,
+        Supported encryption algorithms,
+        Random value
+
+Step 2: Server Hello
+
+    The server replies with:
+        Selected TLS version,
+        Selected encryption algorithm,
+        Another random value
+
+
+Step 3: Certificate
+
+    The server sends its digital certificate.
+        The certificate proves:
+            "I am the real owner of this website."
+
+Step 4: Certificate Verification
+
+The browser verifies:
+    Is the certificate valid?
+    Is it expired?
+    Is it signed by a trusted Certificate Authority (CA)?
+
+If verification fails:
+    Warning:
+        Your connection is not private
+
+Step 5: Key Exchange
+
+    The browser and server create a shared secret key. This key will be used for encryption.
+
+Step 6: Secure Communication
+
+    Now both sides have the same encryption key.
+
+    All HTTP traffic becomes encrypted.
+
+        HTTP + TLS = HTTPS
+
+-------------------------------------------------------------------------------------------
+
+What Happens After the Handshake?   
+Normal HTTP requests continue:
+    GET /index.html
+    POST /login
+    GET /profile
+
+The difference is:
+    Everything is encrypted.
+
+TLS Certificate
+What is a Certificate?
+    A certificate is a digital identity card for a website.
+
+Example Information
+    Domain Name,
+    Public Key,
+    Expiration Date,
+    Certificate Authority
+
+Real-World Example  
+    When you visit: https://google.com
+        Your browser checks Google's certificate before trusting the connection.
+
+--------------------------------------------------------------------------------------------
+
+                Common HTTPS/TLS Attacks
+1. SSL Stripping
+What is it? 
+    An attacker downgrades: 
+        HTTPS → HTTP
+
+Attack Goal
+    Read traffic that should have been encrypted.
+
+2. Man-in-the-Middle (MITM)
+What is it?
+    An attacker secretly places themselves between the client and server.
+        Client <--> Attacker <--> Server
+Attack Goal
+    Intercept or modify communication.
+
+3. Fake Certificates
+What is it?
+    An attacker uses a forged or stolen certificate.
+
+Attack Goal
+    Pretend to be a legitimate website.
+
+4. TLS Downgrade Attack
+What is it?
+    Forcing a connection to use an older, weaker TLS version.
+
+Attack Goal
+    Exploit known weaknesses in outdated protocols.
+
+-----------------------------------------------------------------------------------------
+
+            Why HTTPS is Important
+
+Without HTTPS:
+  Passwords can be stolen.
+  Sessions can be hijacked.
+  Data can be modified.
+  Privacy is lost.
+
+With HTTPS:
+  Data is encrypted.
+  Website identity is verified.
+  Data integrity is protected.
+
+##############################################################################################################
 
 
 
