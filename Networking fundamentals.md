@@ -291,6 +291,179 @@ Example:
 
 ##############################################################################################################
 
+                                                            TCP Handshake, Connection States, and RST Attacks
+
+What is TCP?
+  TCP (Transmission Control Protocol) is a protocol that helps two devices communicate reliably over a network.
+Before sending data, TCP creates a connection between the devices and makes sure the data arrives correctly and in the right order.
+
+Examples: Opening a website (HTTP/HTTPS), Using SSH, Sending emails, Transferring files
+
+------------------------------------------------------------------------------------
+
+TCP Handshake
+What is TCP Handshake?
+  Before a client and a server can exchange data, they must first establish a connection. This process is called the TCP Handshake.
+It allows both devices to confirm that they are ready to communicate.
+
+How It Works
+Client                         Server
+
+SYN -------------------------->
+
+      <---------------- SYN-ACK
+
+ACK -------------------------->
+
+Connection Established
+
+-----------------------------------------
+
+Step 1: SYN
+  The client sends a SYN packet to request a connection.
+Think: "Can we communicate?"
+
+Step 2: SYN-ACK
+  The server responds with SYN-ACK.
+Think: "Yes, I'm ready."
+
+Step 3: ACK
+  The client sends an ACK packet.
+Think: "Great, let's start."
+
+Real-World Example: When you visit a website, your browser performs a TCP handshake with the web server before loading the page.
+
+-----------------------------------------------------------------------------------------
+
+Connection States
+What are Connection States?
+  Connection states show the current stage of a TCP connection, from creation to termination.
+
+Main States
+LISTEN : The server is waiting for connection requests.
+
+SYN-SENT : The client has sent a SYN packet.
+
+SYN-RECEIVED : The server received the SYN and replied with SYN-ACK.
+
+ESTABLISHED : The connection is active and data can be exchanged.
+
+FIN-WAIT : One side wants to close the connection.
+
+TIME-WAIT : TCP waits for a short period to ensure all packets have arrived.
+
+CLOSED : The connection is fully terminated.
+
+Simplified Lifecycle
+LISTEN
+   ↓
+SYN-SENT
+   ↓
+SYN-RECEIVED
+   ↓
+ESTABLISHED
+   ↓
+FIN-WAIT
+   ↓
+TIME-WAIT
+   ↓
+CLOSED
+
+-------------------------------------------------------------------------------
+
+RST (Reset)
+What is an RST Packet?
+  RST (Reset) is a TCP flag used to immediately close a connection.
+Unlike a normal close, an RST does not follow the usual shutdown process.
+
+It simply says: "End this connection right now."
+
+Normal Connection Close
+
+Client                    Server
+
+FIN --------------------->
+
+     <---------------- ACK
+
+     <---------------- FIN
+
+ACK --------------------->
+
+The connection closes gracefully.
+
+
+
+RST Close
+
+Client                    Server
+
+RST --------------------->
+
+The connection closes immediately.
+
+--------------------------------------------------------------------------
+
+RST Attack
+What is an RST Attack?
+  An RST Attack happens when an attacker sends a fake RST packet to an active TCP connection.
+The devices believe the reset packet is legitimate and immediately close the connection.
+
+How It Works
+
+Client <===========> Server
+           ↑
+           |
+       Fake RST
+
+Result : Connection Closed
+
+------------------------------------------------------------------------
+
+Attack Goal : 
+  Disconnect users,
+  Interrupt SSH sessions,
+  Break VPN connections,
+  Disrupt communication,
+  Cause service interruptions
+  
+Real-World Example : 
+You are connected to a remote Linux server using SSH. An attacker sends a fake RST packet. Your SSH session suddenly disconnects even though neither you nor the server chose to end the connection.
+
+Why is it Dangerous?
+RST attacks can:
+  Interrupt important communications,
+  Disconnect administrators from servers,
+  Disrupt business services,
+  Help attackers cause denial-of-service situations
+
+3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
