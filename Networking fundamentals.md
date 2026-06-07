@@ -839,7 +839,156 @@ Common Attacks: Information Gathering, SNMP Enumeration, Community String Attack
 
 ##############################################################################
 
+                            Wireshark: Capturing and Analyzing Live Traffic
+What is Wireshark?
+    Wireshark is a network protocol analyzer that allows you to capture and inspect network traffic in real time.
 
+It shows the packets traveling across a network and helps you understand what devices are communicating and what data is being exchanged.
+
+Wireshark helps you: Troubleshoot network problems, Analyze network performance, Learn how protocols work, Investigate security incidents, Detect suspicious network activity.
+
+How Packet Capturing Works
+
+        Your Device
+            |
+            v
+        Network Interface
+            |
+            v
+        Wireshark
+            |
+            v
+        Captured Packets
+
+Wireshark listens to a network interface and records packets that pass through it.
+
+-----------------------------------------------------------------------------
+
+                    Capturing Live Traffic
+
+        Step 1: Open Wireshark
+
+When Wireshark starts, it displays available network interfaces.
+
+Examples: Ethernet, Wi-Fi, VPN Interfac
+
+        Step 2: Select an Interface
+
+Choose the interface carrying traffic.
+
+Example: Wi-Fi
+
+if you are connected wirelessly.
+
+        Step 3: Start Capture
+
+Click the blue shark-fin icon.
+
+Wireshark immediately begins collecting packets.
+
+        Step 4: Generate Traffic
+
+Examples: Open a website, Ping a host, Download a file, Connect through SSH
+
+You will see new packets appearing in real time.
+
+        Step 5: Stop Capture
+
+Click the red stop button.
+
+The captured packets remain available for analysis.
+
+---------------------------------------------------------------------------
+
+                        Understanding the Wireshark Interface
+Packet List Pane: Shows all captured packets.
+Example:
+
+        No.   Source      Destination   Protocol
+        1     10.0.0.5    8.8.8.8       DNS
+        2     8.8.8.8     10.0.0.5      DNS
+        3     10.0.0.5    142.x.x.x     TCP
+
+
+Packet Details Pane: Displays protocol information for the selected packet.
+Example: Ethernet, IP, TCP, HTTP
+
+Packet Bytes Pane: Shows the raw packet data in hexadecimal and ASCII format.
+
+-----------------------------------------------------------------------------
+
+                    Common Filters
+
+Filters help you focus on specific traffic.
+
+HTTP Traffic: http
+HTTPS Traffic: https or tcp.port == 443
+DNS Traffic: dns
+TCP Traffic: tcp
+UDP Traffic: udp
+Traffic from a Specific IP: ip.addr == 192.168.1.10
+Traffic on Port 22 (SSH): tcp.port == 22
+
+                Analyzing Common Protocols
+    DNS
+
+Example: Query: google.com, Response: 142.250.x.x
+Useful for: DNS troubleshooting, Detecting DNS-based attacks
+
+    TCP
+
+Look for: SYN, SYN-ACK, ACK
+to observe the TCP handshake.
+Useful for: Connection troubleshooting, Detecting SYN flood attacks
+
+    HTTP
+
+Example: GET /index.html
+Useful for: Understanding web requests, Learning HTTP communication
+
+    HTTPS
+
+Traffic is encrypted.
+You can still see: Source IP, Destination IP, Ports, TLS Handshake information
+
+                Security Use Cases
+
+    Detecting Port Scans
+
+Look for one host connecting to many ports rapidly.
+
+Example:
+
+        192.168.1.50
+        → Port 21
+        → Port 22
+        → Port 23
+        → Port 80
+        → Port 443
+
+
+    Detecting ARP Spoofing
+
+Look for unusual ARP replies claiming to be the gateway.
+
+    Detecting DNS Attacks
+
+Watch for: Suspicious domains, Large numbers of DNS requests, Unexpected DNS responses
+
+    Investigating Malware Traffic
+
+Look for: Unknown IP addresses, Repeated outbound connections, Suspicious DNS requests
+
+------------------------------------------------------------------------------
+
+                                Common Challenges
+Large Packet Captures: Busy networks can generate thousands of packets per second. Use filters to reduce noise.
+
+Encrypted Traffic: HTTPS traffic is encrypted. You can see metadata but not the actual content.
+
+Capturing the Wrong Interface: If no packets appear, verify that the correct network interface is selected.
+
+#############################################################################
 
 
 
