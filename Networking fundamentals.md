@@ -866,6 +866,7 @@ Wireshark listens to a network interface and records packets that pass through i
 
                     Capturing Live Traffic
 
+
         Step 1: Open Wireshark
 
 When Wireshark starts, it displays available network interfaces.
@@ -930,6 +931,8 @@ Traffic from a Specific IP: ip.addr == 192.168.1.10
 Traffic on Port 22 (SSH): tcp.port == 22
 
                 Analyzing Common Protocols
+
+
     DNS
 
 Example: Query: google.com, Response: 142.250.x.x
