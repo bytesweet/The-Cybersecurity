@@ -829,7 +829,97 @@ With HTTPS:
 
 ##############################################################################################################
 
+            Common Protocols: SSH, SMTP, FTP, and SNMP
 
+What are Network Protocols?
+    A network protocol is a set of rules that allows devices to communicate with each other over a network.
+
+Different protocols are designed for different purposes, such as remote access, email delivery, file transfer, or network monitoring.
+
+---------------------------------------------------------------
+
+        SSH (Secure Shell)
+
+What is SSH?
+    SSH (Secure Shell) is a protocol used to securely access and manage remote systems over a network.
+
+It encrypts all communication between the client and the server.
+
+Default Port : 22
+
+Common Uses : Remote server administration, Secure command execution, Secure file transfer (SCP/SFTP)
+
+Real-World Example : A Linux administrator connects to a remote server: ssh user@server-ip
+
+Security Benefits : Encrypted communication, Secure authentication, Protection against eavesdropping
+
+Common Attacks : Brute Force Attacks, Credential Theft, SSH Key Theft
+
+----------------------------------------------------------------------
+
+        SMTP (Simple Mail Transfer Protocol)
+
+What is SMTP?
+    SMTP (Simple Mail Transfer Protocol) is used to send emails between mail servers and from email clients to mail servers.
+
+Default Ports : 
+        25   - SMTP, 587  - SMTP Submission, 465  - SMTPS (Encrypted)
+    
+Common Uses: Sending emails, Email server communication
+
+Real-World Example: When you click Send in your email application, SMTP delivers the message to the recipient's mail server.
+
+Security Risks:  Email Spoofing, Spam Abuse, Phishing Emails
+
+Common Attacks: SMTP Spoofing, Open Relay Abuse, Phishing Campaigns
+
+------------------------------------------------------------------------
+
+            FTP (File Transfer Protocol)
+What is FTP?
+    FTP (File Transfer Protocol) is used to transfer files between a client and a server.
+
+Default Ports: 21 - Control Connection, 20 - Data Connection
+
+Common Uses:  Uploading website files, Downloading files from servers, File sharing
+
+Real-World Example: A web developer uploads website files to a hosting server using FTP.
+
+Major Problem: FTP sends data, usernames, and passwords in plain text.
+
+Secure Alternatives: SFTP (SSH File Transfer Protocol), FTPS (FTP over TLS)
+
+Common Attacks: Credential Sniffing, Brute Force Attacks, File Manipulation
+
+--------------------------------------------------------------------------
+
+        SNMP (Simple Network Management Protocol)
+What is SNMP?
+    SNMP (Simple Network Management Protocol) is used to monitor and manage network devices.
+
+Default Ports: 161 - SNMP Queries, 162 - SNMP Traps
+
+Common Uses: Monitoring routers, Monitoring switches, Monitoring servers, Performance tracking
+
+Real-World Example: A network administrator checks CPU usage, bandwidth, and device health from a central monitoring system.
+
+Information SNMP Can Provide: CPU Usage, Memory Usage, Network Traffic, Device Status, Interface Statistics
+
+Common Attacks: Information Gathering, SNMP Enumeration, Community String Attacks
+
+-------------------------------------------------------------------------
+
+            Security Perspective
+
+        | Protocol | Main Risk              |
+        | -------- | ---------------------- |
+        | SSH      | Brute Force Attacks    |
+        | SMTP     | Spoofing and Phishing  |
+        | FTP      | Plain-text Credentials |
+        | SNMP     | Information Disclosure |
+
+
+##############################################################################
 
 
 
