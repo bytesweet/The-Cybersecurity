@@ -151,7 +151,7 @@ Real-World Scenario: An attacker connects a device to a network cable to capture
 
                                                         TCP/IP Stack: IP Addressing, Subnetting, and CIDR
 
-Definition
+Definition: 
 
 The TCP/IP Stack is the networking model used by the Internet. It defines how devices communicate and exchange data.
 
@@ -204,7 +204,7 @@ Real-World Scenario
 ------------------------------------------------------------------------------
 
     Subnetting
-Definition
+Definition: 
   Subnetting is the process of dividing a large network into smaller networks called subnets.
 
 Why Use Subnetting?
@@ -214,13 +214,13 @@ Why Use Subnetting?
   Increased security
   Efficient IP allocation
   
-Example
+Example: 
   Suppose a company owns: 192.168.1.0/24
   Instead of one large network, it can create: 192.168.1.0/26, 192.168.1.64/26, 192.168.1.128/26, 192.168.1.192/26
 
     Now different departments can use different subnets.
 
-Real-World Scenario
+Real-World Scenario: 
 
   A company separates:
     HR Department
@@ -232,8 +232,7 @@ into different subnets to reduce unnecessary traffic and improve security.
 -----------------------------------------------------------------------------
 
     CIDR (Classless Inter-Domain Routing)
-Definition
-
+Definition: 
   CIDR is a method of representing IP networks using a prefix length.
 
   Instead of using old class-based networking (Class A, B, C), CIDR provides flexible network allocation.
@@ -256,7 +255,7 @@ Common CIDR Values
     | /28  | 255.255.255.240 | 14           |
     | /30  | 255.255.255.252 | 2            |
 
-Example
+Example: 
   Network: 192.168.1.0/24
   Meaning : 24 bits = Network Portion, 8 bits = Host Portion
   Total Addresses : 256
