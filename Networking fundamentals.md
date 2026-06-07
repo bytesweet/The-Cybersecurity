@@ -5,11 +5,7 @@ What is the OSI Model?
 
 Instead of treating communication as one large process, the OSI Model divides it into 7 layers, each with a specific responsibility.
 
-Think of it like sending a package:
-  You write the message.
-  You put it in a box.
-  A shipping company transports it.
-  The recipient receives and opens it.
+Think of it like sending a package: You write the message. You put it in a box. A shipping company transports it. The recipient receives and opens it.
 
 Network communication works similarly.
 
@@ -34,11 +30,7 @@ Purpose: Provides network services directly to applications used by users.
 
 Examples: HTTP, HTTPS, FTP, DNS, SMTP
 
-Common Attacks:
-  SQL Injection (SQLi),
-  Cross-Site Scripting (XSS),
-  Phishing,
-  Command Injection,
+Common Attacks: SQL Injection (SQLi), Cross-Site Scripting (XSS), Phishing, Command Injection,
 
 Attack Goal: Steal data, bypass authentication, or execute malicious code.
 
@@ -52,10 +44,7 @@ Purpose: Handles data formatting, encryption, decryption, and compression.
 
 Examples: SSL/TLS, JPEG, PNG, MP4
 
-Common Attacks:
-  SSL Stripping,
-  Certificate Spoofing,
-  Weak Encryption Exploitation,
+Common Attacks: SSL Stripping, Certificate Spoofing, Weak Encryption Exploitation,
 
 Attack Goal: Bypass encryption and read protected data.
 
@@ -67,10 +56,7 @@ Real-World Scenario: An attacker intercepts a secure connection and forces it to
 
 Purpose: Establishes, manages, and terminates communication sessions.
 
-Common Attacks:
-  Session Hijacking,
-  Session Replay,
-  Session Fixation,
+Common Attacks: Session Hijacking, Session Replay, Session Fixation,
 
 Attack Goal: Take control of an authenticated user's session.
 
@@ -84,10 +70,7 @@ Purpose: Provides reliable end-to-end communication.
 
 Protocols: TCP, UDP
 
-Common Attacks:
-  SYN Flood,
-  UDP Flood,
-  TCP Reset Attack,
+Common Attacks: SYN Flood, UDP Flood, TCP Reset Attack,
 
 Attack Goal: Disrupt services or exhaust server resources.
 
@@ -101,11 +84,7 @@ Purpose: Handles logical addressing and packet routing.
 
 Protocols: IP, ICMP, IPSec
 
-Common Attacks:
-  IP Spoofing,
-  ICMP Flood,
-  Smurf Attack,
-  Routing Attacks,
+Common Attacks: IP Spoofing, ICMP Flood, Smurf Attack, Routing Attacks,
 
 Attack Goal: Hide the attacker's identity or manipulate network traffic.
 
@@ -119,10 +98,7 @@ Purpose: Provides communication between devices on the same local network.
 
 Protocols: Ethernet, ARP, MAC
 
-Common Attacks:
-  ARP Spoofing,
-  MAC Flooding,
-  VLAN Hopping,
+Common Attacks: ARP Spoofing, MAC Flooding, VLAN Hopping,
 
 Attack Goal: Intercept, redirect, or monitor local network traffic.
 
@@ -136,11 +112,7 @@ Purpose: Handles the physical transmission of data through hardware and media.
 
 Examples: Network Cables, Fiber Optics, Wireless Signals, Network Devices
 
-Common Attacks:
-  Cable Tapping,
-  Signal Jamming,
-  Hardware Theft,
-  Device Tampering,
+Common Attacks: Cable Tapping, Signal Jamming, Hardware Theft, Device Tampering,
 
 Attack Goal: Gain physical access to data or disrupt communications.
 
@@ -152,7 +124,6 @@ Real-World Scenario: An attacker connects a device to a network cable to capture
                                                         TCP/IP Stack: IP Addressing, Subnetting, and CIDR
 
 Definition: 
-
 The TCP/IP Stack is the networking model used by the Internet. It defines how devices communicate and exchange data.
 
 TCP/IP Layers
@@ -166,7 +137,7 @@ TCP/IP Layers
 
 -------------------------------------------------------------
 
-    IP Addressing
+             IP Addressing
 An IP Address uniquely identifies a device on a network, similar to how a home address identifies a house.
 
 Without IP addresses, devices would not know where to send or receive data.
@@ -184,18 +155,14 @@ Each octet ranges from: 0 - 255
 
     Public vs Private IP
 
-Public IP
-  Routable on the Internet
-  Assigned by an ISP
-  Globally unique
+Public IP: Routable on the Internet, Assigned by an ISP, Globally unique
 
 Example: 8.8.8.8
 
-Private IP
-  Used inside local networks.
+Private IP: Used inside local networks.
 Ranges: 10.0.0.0 - 10.255.255.255, 172.16.0.0 - 172.31.255.255, 192.168.0.0 - 192.168.255.255
 
-Real-World Scenario
+Real-World Scenario: 
   Your router may have: Public IP: 103.x.x.x
   While your laptop has: Private IP: 192.168.1.10
     
@@ -203,16 +170,11 @@ Real-World Scenario
 
 ------------------------------------------------------------------------------
 
-    Subnetting
-Definition: 
-  Subnetting is the process of dividing a large network into smaller networks called subnets.
+        Subnetting
 
-Why Use Subnetting?
-  Better network organization
-  Reduced broadcast traffic
-  Improved performance
-  Increased security
-  Efficient IP allocation
+Definition: Subnetting is the process of dividing a large network into smaller networks called subnets.
+
+Why Use Subnetting?: Better network organization, Reduced broadcast traffic, Improved performance, Increased security, Efficient IP allocation
   
 Example: 
   Suppose a company owns: 192.168.1.0/24
@@ -222,16 +184,13 @@ Example:
 
 Real-World Scenario: 
 
-  A company separates:
-    HR Department
-    Finance Department
-    IT Department
+  A company separates: HR Department, Finance Department, IT Department
 
 into different subnets to reduce unnecessary traffic and improve security.
 
 -----------------------------------------------------------------------------
 
-    CIDR (Classless Inter-Domain Routing)
+        CIDR (Classless Inter-Domain Routing)
 Definition: 
   CIDR is a method of representing IP networks using a prefix length.
 
@@ -420,22 +379,13 @@ Result : Connection Closed
 
 ------------------------------------------------------------------------
 
-Attack Goal : 
-  Disconnect users,
-  Interrupt SSH sessions,
-  Break VPN connections,
-  Disrupt communication,
-  Cause service interruptions
+Attack Goal : Disconnect users, Interrupt SSH sessions, Break VPN connections, Disrupt communication, Cause service interruptions
   
 Real-World Example : 
 You are connected to a remote Linux server using SSH. An attacker sends a fake RST packet. Your SSH session suddenly disconnects even though neither you nor the server chose to end the connection.
 
 Why is it Dangerous?
-RST attacks can:
-  Interrupt important communications,
-  Disconnect administrators from servers,
-  Disrupt business services,
-  Help attackers cause denial-of-service situations
+RST attacks can: Interrupt important communications, Disconnect administrators from servers, Disrupt business services, Help attackers cause denial-of-service situations
 
 ##############################################################################################################
 
@@ -526,10 +476,7 @@ What is a DNS Zone?
 Example
 Domain: example.com
 
-Zone contains records such as:
-  www.example.com
-  mail.example.com
-  api.example.com
+Zone contains records such as: www.example.com, mail.example.com, api.example.com
   
 Common DNS Records
   A Record
@@ -553,11 +500,7 @@ NS Record
 
 
 Why Are Zones Important?
-  Zones allow organizations to:
-    Manage domains efficiently,
-    Delegate administration,
-    Store DNS records,
-    Control domain resolution
+  Zones allow organizations to: Manage domains efficiently, Delegate administration, Store DNS records, Control domain resolution
 
 -------------------------------------------------------------------
 
@@ -624,9 +567,7 @@ Monitor DNS Traffic
   Look for unusual requests or suspicious domains.
 
 Use Trusted DNS Servers
-  Examples include:
-    Google Public DNS
-    Cloudflare DNS
+  Examples include: Google Public DNS, Cloudflare DNS
     
 Keep DNS Servers Updated
   Apply security patches regularly.
@@ -663,10 +604,7 @@ Example
 Even if someone intercepts the traffic, they cannot easily read it.
 
 What is TLS?
-  TLS (Transport Layer Security) is the protocol that provides: 
-    Encryption, 
-    Authentication, 
-    Data Integrity
+  TLS (Transport Layer Security) is the protocol that provides: Encryption, Authentication, Data Integrity
     
 TLS is what makes HTTPS secure.
 
@@ -685,10 +623,7 @@ Two things happen:
 
     TLS Handshake
 What is a TLS Handshake?
-    A TLS Handshake is the process used by a browser and server to:
-        Verify identities,
-        Exchange cryptographic information,
-        Create encryption keys
+    A TLS Handshake is the process used by a browser and server to: Verify identities, Exchange cryptographic information, Create encryption keys
         
 Before any secure data is exchanged.
 
@@ -713,17 +648,11 @@ Step 1: Client Hello
     The browser says: 
         "I want a secure connection."
 
-    It sends:
-        Supported TLS versions,
-        Supported encryption algorithms,
-        Random value
+    It sends: Supported TLS versions, Supported encryption algorithms, Random value
 
 Step 2: Server Hello
 
-    The server replies with:
-        Selected TLS version,
-        Selected encryption algorithm,
-        Another random value
+    The server replies with: Selected TLS version, Selected encryption algorithm, Another random value
 
 
 Step 3: Certificate
@@ -770,11 +699,7 @@ TLS Certificate
 What is a Certificate?
     A certificate is a digital identity card for a website.
 
-Example Information
-    Domain Name,
-    Public Key,
-    Expiration Date,
-    Certificate Authority
+Example Information: Domain Name, Public Key, Expiration Date, Certificate Authority
 
 Real-World Example  
     When you visit: https://google.com
@@ -816,16 +741,9 @@ Attack Goal
 
             Why HTTPS is Important
 
-Without HTTPS:
-  Passwords can be stolen.
-  Sessions can be hijacked.
-  Data can be modified.
-  Privacy is lost.
+Without HTTPS: Passwords can be stolen, Sessions can be hijacked, Data can be modified, Privacy is lost.
 
-With HTTPS:
-  Data is encrypted.
-  Website identity is verified.
-  Data integrity is protected.
+With HTTPS: Data is encrypted, Website identity is verified, Data integrity is protected.
 
 ##############################################################################################################
 
