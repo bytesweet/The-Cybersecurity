@@ -28,7 +28,7 @@ Network communication works similarly.
 
 -------------------------------------
 
-Layer 7 – Application
+    Layer 7 – Application
 
 Purpose: Provides network services directly to applications used by users.
 
@@ -46,7 +46,7 @@ Real-World Scenario: An attacker exploits a vulnerable website login form to gai
 
 --------------------------------------------
 
-Layer 6 – Presentation
+    Layer 6 – Presentation
 
 Purpose: Handles data formatting, encryption, decryption, and compression.
 
@@ -63,7 +63,7 @@ Real-World Scenario: An attacker intercepts a secure connection and forces it to
 
 ------------------------------------------
 
-Layer 5 – Session
+    Layer 5 – Session
 
 Purpose: Establishes, manages, and terminates communication sessions.
 
@@ -78,7 +78,7 @@ Real-World Scenario: An attacker steals a session cookie and gains access to a u
 
 -------------------------------------
 
-Layer 4 – Transport
+    Layer 4 – Transport
 
 Purpose: Provides reliable end-to-end communication.
 
@@ -95,7 +95,7 @@ Real-World Scenario: A server becomes unavailable after receiving a massive numb
 
 -----------------------------------
 
-Layer 3 – Network
+    Layer 3 – Network
 
 Purpose: Handles logical addressing and packet routing.
 
@@ -113,7 +113,7 @@ Real-World Scenario: An attacker uses a fake IP address to disguise the source o
 
 ------------------------------------
 
-Layer 2 – Data Link
+    Layer 2 – Data Link
 
 Purpose: Provides communication between devices on the same local network.
 
@@ -130,7 +130,7 @@ Real-World Scenario: An attacker tricks devices into sending traffic through the
 
 ---------------------------------------
 
-Layer 1 – Physical
+    Layer 1 – Physical
 
 Purpose: Handles the physical transmission of data through hardware and media.
 
@@ -166,16 +166,14 @@ TCP/IP Layers
 
 -------------------------------------------------------------
 
-IP Addressing
-Purpose
-
+    IP Addressing
 An IP Address uniquely identifies a device on a network, similar to how a home address identifies a house.
 
 Without IP addresses, devices would not know where to send or receive data.
 
 ----------------------------------------------------------------
 
-IPv4 Address Structure
+    IPv4 Address Structure
 
 IPv4 consists of 32 bits divided into 4 octets.
 
@@ -184,7 +182,7 @@ Each octet ranges from: 0 - 255
 
 ----------------------------------------------------------------
 
-Public vs Private IP
+    Public vs Private IP
 
 Public IP
   Routable on the Internet
@@ -205,7 +203,7 @@ Real-World Scenario
 
 ------------------------------------------------------------------------------
 
-Subnetting
+    Subnetting
 Definition
   Subnetting is the process of dividing a large network into smaller networks called subnets.
 
@@ -233,7 +231,7 @@ into different subnets to reduce unnecessary traffic and improve security.
 
 -----------------------------------------------------------------------------
 
-CIDR (Classless Inter-Domain Routing)
+    CIDR (Classless Inter-Domain Routing)
 Definition
 
   CIDR is a method of representing IP networks using a prefix length.
@@ -269,7 +267,7 @@ Example
 
 ----------------------------------------------------------------------------------
 
-Relationship Between IP Addressing, Subnetting, and CIDR
+    Relationship Between IP Addressing, Subnetting, and CIDR
 
 IP Addressing : Identifies devices.
 Example: 192.168.1.10
@@ -374,7 +372,7 @@ Simplified Lifecycle
 
 -------------------------------------------------------------------------------
 
-RST (Reset)
+    RST (Reset)
 What is an RST Packet?
   RST (Reset) is a TCP flag used to immediately close a connection.
 Unlike a normal close, an RST does not follow the usual shutdown process.
@@ -407,7 +405,7 @@ The connection closes immediately.
 
 --------------------------------------------------------------------------
 
-RST Attack
+    RST Attack
 What is an RST Attack?
   An RST Attack happens when an attacker sends a fake RST packet to an active TCP connection.
 The devices believe the reset packet is legitimate and immediately close the connection.
@@ -454,7 +452,7 @@ DNS converts a domain name into an IP address so your device can find the correc
 
 ---------------------------------------------------------------------------------------------
 
-DNS Resolution
+    DNS Resolution
 What is DNS Resolution?
   DNS Resolution is the process of converting a domain name into an IP address.
 
@@ -619,8 +617,8 @@ Why Are Zones Important?
 
 -----------------------------------------------------------------------------
 
-How to Protect DNS
-  Use DNSSEC
+    How to Protect DNS
+Use DNSSEC
   Helps verify that DNS responses are authentic.
 
 Monitor DNS Traffic
@@ -686,7 +684,7 @@ Two things happen:
   
 -----------------------------------------------------------------------------------------------
 
-TLS Handshake
+    TLS Handshake
 What is a TLS Handshake?
     A TLS Handshake is the process used by a browser and server to:
         Verify identities,
