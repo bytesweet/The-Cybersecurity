@@ -307,13 +307,14 @@ What is TCP Handshake?
 It allows both devices to confirm that they are ready to communicate.
 
 How It Works
-Client                         Server
 
-SYN -------------------------->
-
-      <---------------- SYN-ACK
-
-ACK -------------------------->
+  Client                         Server
+  
+  SYN -------------------------->
+  
+        <---------------- SYN-ACK
+  
+  ACK -------------------------->
 
 Connection Established
 
@@ -355,19 +356,19 @@ TIME-WAIT : TCP waits for a short period to ensure all packets have arrived.
 CLOSED : The connection is fully terminated.
 
 Simplified Lifecycle
-LISTEN
-   ↓
-SYN-SENT
-   ↓
-SYN-RECEIVED
-   ↓
-ESTABLISHED
-   ↓
-FIN-WAIT
-   ↓
-TIME-WAIT
-   ↓
-CLOSED
+  LISTEN
+     ↓
+  SYN-SENT
+     ↓
+  SYN-RECEIVED
+     ↓
+  ESTABLISHED
+     ↓
+  FIN-WAIT
+     ↓
+  TIME-WAIT
+     ↓
+  CLOSED
 
 -------------------------------------------------------------------------------
 
@@ -380,25 +381,25 @@ It simply says: "End this connection right now."
 
 Normal Connection Close
 
-Client                    Server
-
-FIN --------------------->
-
-     <---------------- ACK
-
-     <---------------- FIN
-
-ACK --------------------->
+  Client                    Server
+  
+  FIN --------------------->
+  
+       <---------------- ACK
+  
+       <---------------- FIN
+  
+  ACK --------------------->
 
 The connection closes gracefully.
 
 
 
 RST Close
-
-Client                    Server
-
-RST --------------------->
+  
+  Client                    Server
+  
+  RST --------------------->
 
 The connection closes immediately.
 
@@ -411,10 +412,10 @@ The devices believe the reset packet is legitimate and immediately close the con
 
 How It Works
 
-Client <===========> Server
-           ↑
-           |
-       Fake RST
+  Client <===========> Server
+             ↑
+             |
+         Fake RST
 
 Result : Connection Closed
 
