@@ -248,7 +248,7 @@ Example:
 
 ##############################################################################################################
 
-                                                            TCP Handshake, Connection States, and RST Attacks
+                                                            TCP Handshake, TCP Connection States, and RST Attacks
 
 What is TCP?
   TCP (Transmission Control Protocol) is a protocol that helps two devices communicate reliably over a network.
@@ -389,7 +389,7 @@ RST attacks can: Interrupt important communications, Disconnect administrators f
 
 ##############################################################################################################
 
-                                                        DNS Resolution, Zones, and DNS-Based Attacks
+                                                        DNS Resolution, DNS Zones, and DNS-Based Attacks
 
 What is DNS?
   DNS (Domain Name System) is like the Internet's phonebook.
@@ -574,7 +574,7 @@ Keep DNS Servers Updated
 
 ##############################################################################################################
 
-                                                    HTTP/HTTPS and TLS Handshake Internals
+                                                   HTTP, HTTPS, and TLS Handshake Internals
 What is HTTP?
   HTTP (HyperText Transfer Protocol) is the protocol used to transfer data between a web browser and a web server.
 When you visit a website, your browser uses HTTP to request web pages, images, videos, and other content.
