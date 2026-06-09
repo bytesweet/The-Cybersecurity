@@ -11,7 +11,7 @@ Network communication works similarly.
 
 --------------------------------------------
 
-    The 7 Layers of the OSI Model
+   The 7 Layers of the OSI Model
     | Layer | Name         |
     | ----- | ------------ |
     | 7     | Application  |
