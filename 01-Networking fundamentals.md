@@ -1,6 +1,6 @@
-                                                       OSI Model and Where Attacks Happen at Each Layer
+# OSI Model and Where Attacks Happen at Each Layer
 
-What is the OSI Model?
+## What is the OSI Model?
   The OSI (Open Systems Interconnection) Model is a framework that describes how data moves across a network.
 
 Instead of treating communication as one large process, the OSI Model divides it into 7 layers, each with a specific responsibility.
@@ -24,27 +24,35 @@ Network communication works similarly.
 
 -------------------------------------
 
-    Layer 7 – Application
+## Layer 7 – Application
 
 Purpose: Provides network services directly to applications used by users.
 
 Examples: HTTP, HTTPS, FTP, DNS, SMTP
 
-Common Attacks: SQL Injection (SQLi), Cross-Site Scripting (XSS), Phishing, Command Injection,
+Common Attacks: 
+- SQL Injection (SQLi) 
+- Cross-Site Scripting (XSS) 
+- Phishing, Command Injection,
 
-Attack Goal: Steal data, bypass authentication, or execute malicious code.
+Attack Goal: 
+- Steal data 
+- bypass authentication or execute malicious code.
 
 Real-World Scenario: An attacker exploits a vulnerable website login form to gain access to sensitive user information.
 
 --------------------------------------------
 
-    Layer 6 – Presentation
+## Layer 6 – Presentation
 
 Purpose: Handles data formatting, encryption, decryption, and compression.
 
 Examples: SSL/TLS, JPEG, PNG, MP4
 
-Common Attacks: SSL Stripping, Certificate Spoofing, Weak Encryption Exploitation,
+Common Attacks: 
+- SSL Stripping, 
+- Certificate Spoofing, 
+- Weak Encryption Exploitation,
 
 Attack Goal: Bypass encryption and read protected data.
 
@@ -52,11 +60,14 @@ Real-World Scenario: An attacker intercepts a secure connection and forces it to
 
 ------------------------------------------
 
-    Layer 5 – Session
+## Layer 5 – Session
 
 Purpose: Establishes, manages, and terminates communication sessions.
 
-Common Attacks: Session Hijacking, Session Replay, Session Fixation,
+Common Attacks: 
+- Session Hijacking, 
+- Session Replay, 
+- Session Fixation,
 
 Attack Goal: Take control of an authenticated user's session.
 
@@ -64,13 +75,16 @@ Real-World Scenario: An attacker steals a session cookie and gains access to a u
 
 -------------------------------------
 
-    Layer 4 – Transport
+## Layer 4 – Transport
 
 Purpose: Provides reliable end-to-end communication.
 
 Protocols: TCP, UDP
 
-Common Attacks: SYN Flood, UDP Flood, TCP Reset Attack,
+Common Attacks: 
+- SYN Flood, 
+- UDP Flood, 
+- TCP Reset Attack,
 
 Attack Goal: Disrupt services or exhaust server resources.
 
@@ -78,13 +92,17 @@ Real-World Scenario: A server becomes unavailable after receiving a massive numb
 
 -----------------------------------
 
-    Layer 3 – Network
+## Layer 3 – Network
 
 Purpose: Handles logical addressing and packet routing.
 
 Protocols: IP, ICMP, IPSec
 
-Common Attacks: IP Spoofing, ICMP Flood, Smurf Attack, Routing Attacks,
+Common Attacks: 
+- IP Spoofing, 
+- ICMP Flood, 
+- Smurf Attack, 
+- Routing Attacks,
 
 Attack Goal: Hide the attacker's identity or manipulate network traffic.
 
@@ -92,13 +110,16 @@ Real-World Scenario: An attacker uses a fake IP address to disguise the source o
 
 ------------------------------------
 
-    Layer 2 – Data Link
+## Layer 2 – Data Link
 
 Purpose: Provides communication between devices on the same local network.
 
 Protocols: Ethernet, ARP, MAC
 
-Common Attacks: ARP Spoofing, MAC Flooding, VLAN Hopping,
+Common Attacks: 
+- ARP Spoofing, 
+- MAC Flooding, 
+- VLAN Hopping,
 
 Attack Goal: Intercept, redirect, or monitor local network traffic.
 
@@ -106,27 +127,31 @@ Real-World Scenario: An attacker tricks devices into sending traffic through the
 
 ---------------------------------------
 
-    Layer 1 – Physical
+## Layer 1 – Physical
 
 Purpose: Handles the physical transmission of data through hardware and media.
 
 Examples: Network Cables, Fiber Optics, Wireless Signals, Network Devices
 
-Common Attacks: Cable Tapping, Signal Jamming, Hardware Theft, Device Tampering,
+Common Attacks: 
+- Cable Tapping, 
+- Signal Jamming, 
+- Hardware Theft, 
+- Device Tampering,
 
 Attack Goal: Gain physical access to data or disrupt communications.
 
 Real-World Scenario: An attacker connects a device to a network cable to capture transmitted traffic
 
 
-###############################################################################################################################
+#########################################################################################################
 
-                                                        TCP/IP Stack: IP Addressing, Subnetting, and CIDR
+# TCP/IP Stack: IP Addressing, Subnetting, and CIDR
 
 Definition: 
 The TCP/IP Stack is the networking model used by the Internet. It defines how devices communicate and exchange data.
 
-TCP/IP Layers
+## TCP/IP Layers
 
     | Layer          | Function                           |
     | -------------- | ---------------------------------- |
@@ -137,14 +162,14 @@ TCP/IP Layers
 
 -------------------------------------------------------------
 
-             IP Addressing
+## IP Addressing
 An IP Address uniquely identifies a device on a network, similar to how a home address identifies a house.
 
 Without IP addresses, devices would not know where to send or receive data.
 
 ----------------------------------------------------------------
 
-    IPv4 Address Structure
+## IPv4 Address Structure
 
 IPv4 consists of 32 bits divided into 4 octets.
 
@@ -153,7 +178,7 @@ Each octet ranges from: 0 - 255
 
 ----------------------------------------------------------------
 
-    Public vs Private IP
+## Public vs Private IP
 
 Public IP: Routable on the Internet, Assigned by an ISP, Globally unique
 
@@ -170,7 +195,7 @@ Real-World Scenario:
 
 ------------------------------------------------------------------------------
 
-        Subnetting
+## Subnetting
 
 Definition: Subnetting is the process of dividing a large network into smaller networks called subnets.
 
@@ -190,7 +215,7 @@ into different subnets to reduce unnecessary traffic and improve security.
 
 -----------------------------------------------------------------------------
 
-        CIDR (Classless Inter-Domain Routing)
+## CIDR (Classless Inter-Domain Routing)
 Definition: 
   CIDR is a method of representing IP networks using a prefix length.
 
@@ -201,7 +226,7 @@ CIDR Notation
   Example: 192.168.1.0/24
     The number after "/" indicates how many bits belong to the network portion.
 
-Common CIDR Values
+## Common CIDR Values
 
     | CIDR | Subnet Mask     | Usable Hosts |
     | ---- | --------------- | ------------ |
@@ -225,7 +250,7 @@ Example:
 
 ----------------------------------------------------------------------------------
 
-    Relationship Between IP Addressing, Subnetting, and CIDR
+## Relationship Between IP Addressing, Subnetting, and CIDR
 
 IP Addressing : Identifies devices.
 Example: 192.168.1.10
@@ -246,9 +271,9 @@ Example:
       If one subnet is compromised, attackers may have more difficulty reaching other departments.
 
 
-##############################################################################################################
+#########################################################################################################
 
-                                                            TCP Handshake, TCP Connection States, and RST Attacks
+# TCP Handshake, TCP Connection States, and RST Attacks
 
 What is TCP?
   TCP (Transmission Control Protocol) is a protocol that helps two devices communicate reliably over a network.
@@ -258,7 +283,7 @@ Examples: Opening a website (HTTP/HTTPS), Using SSH, Sending emails, Transferrin
 
 ------------------------------------------------------------------------------------
 
-TCP Handshake
+## TCP Handshake
 What is TCP Handshake?
   Before a client and a server can exchange data, they must first establish a connection. This process is called the TCP Handshake.
 It allows both devices to confirm that they are ready to communicate.
@@ -293,7 +318,7 @@ Real-World Example: When you visit a website, your browser performs a TCP handsh
 
 -----------------------------------------------------------------------------------------
 
-Connection States
+## Connection States
 What are Connection States?
   Connection states show the current stage of a TCP connection, from creation to termination.
 
@@ -330,7 +355,7 @@ Simplified Lifecycle
 
 -------------------------------------------------------------------------------
 
-    RST (Reset)
+## RST (Reset)
 What is an RST Packet?
   RST (Reset) is a TCP flag used to immediately close a connection.
 Unlike a normal close, an RST does not follow the usual shutdown process.
@@ -363,7 +388,7 @@ The connection closes immediately.
 
 --------------------------------------------------------------------------
 
-    RST Attack
+## RST Attack
 What is an RST Attack?
   An RST Attack happens when an attacker sends a fake RST packet to an active TCP connection.
 The devices believe the reset packet is legitimate and immediately close the connection.
@@ -387,9 +412,9 @@ You are connected to a remote Linux server using SSH. An attacker sends a fake R
 Why is it Dangerous?
 RST attacks can: Interrupt important communications, Disconnect administrators from servers, Disrupt business services, Help attackers cause denial-of-service situations
 
-##############################################################################################################
+#########################################################################################################
 
-                                                        DNS Resolution, DNS Zones, and DNS-Based Attacks
+# DNS Resolution, DNS Zones, and DNS-Based Attacks
 
 What is DNS?
   DNS (Domain Name System) is like the Internet's phonebook.
@@ -401,7 +426,7 @@ DNS converts a domain name into an IP address so your device can find the correc
 
 ---------------------------------------------------------------------------------------------
 
-    DNS Resolution
+## DNS Resolution
 What is DNS Resolution?
   DNS Resolution is the process of converting a domain name into an IP address.
 
@@ -429,7 +454,7 @@ How It Works
 
   --------------------------------------------------------------------------------------
 
-            Step-by-Step
+##  Step-by-Step
 Step 1: User Requests a Website
 
   You enter: google.com
@@ -468,7 +493,7 @@ Real-World Example
   
 -------------------------------------------------------------------------------
 
-          DNS Zones
+##  DNS Zones
 What is a DNS Zone?
   A DNS Zone is a portion of the DNS namespace managed by a specific DNS server.
   Think of it as a database that stores DNS records for a domain.
@@ -479,23 +504,23 @@ Domain: example.com
 Zone contains records such as: www.example.com, mail.example.com, api.example.com
   
 Common DNS Records
-  A Record
+  A Record:
   Maps a domain name to an IPv4 address.
 
 example.com → 192.168.1.10
 
-AAAA Record
+AAAA Record:
   Maps a domain name to an IPv6 address.
 
-MX Record
+MX Record:
   Specifies mail servers.
     mail.example.com
 
-CNAME Record
+CNAME Record:
   Creates an alias for another domain.
     www.example.com → example.com
     
-NS Record
+NS Record:
   Specifies the authoritative DNS servers for a domain.
 
 
@@ -504,7 +529,7 @@ Why Are Zones Important?
 
 -------------------------------------------------------------------
 
-                  DNS-Based Attacks
+##  DNS-Based Attacks
 1. DNS Spoofing
   What is it?
     An attacker provides a fake DNS response and redirects users to a malicious website.
@@ -559,23 +584,24 @@ Why Are Zones Important?
 
 -----------------------------------------------------------------------------
 
-    How to Protect DNS
-Use DNSSEC
+##  How to Protect DNS
+Use DNSSEC:
   Helps verify that DNS responses are authentic.
 
-Monitor DNS Traffic
+Monitor DNS Traffic:
   Look for unusual requests or suspicious domains.
 
-Use Trusted DNS Servers
+Use Trusted DNS Servers:
   Examples include: Google Public DNS, Cloudflare DNS
     
-Keep DNS Servers Updated
+Keep DNS Servers Updated:
   Apply security patches regularly.
 
-##############################################################################################################
+#########################################################################################################
 
-                                                   HTTP, HTTPS, and TLS Handshake Internals
-What is HTTP?
+# HTTP, HTTPS, and TLS Handshake Internals
+
+## What is HTTP?
   HTTP (HyperText Transfer Protocol) is the protocol used to transfer data between a web browser and a web server.
 When you visit a website, your browser uses HTTP to request web pages, images, videos, and other content.
 
@@ -594,7 +620,7 @@ An attacker monitoring the network can see the password.
 
 -----------------------------------------------------------------------------------------------
 
-What is HTTPS?
+## What is HTTPS?
   HTTPS (HyperText Transfer Protocol Secure) is HTTP protected by TLS (Transport Layer Security).
 HTTPS encrypts communication between the browser and server.
 
@@ -621,7 +647,7 @@ Two things happen:
   
 -----------------------------------------------------------------------------------------------
 
-    TLS Handshake
+## TLS Handshake
 What is a TLS Handshake?
     A TLS Handshake is the process used by a browser and server to: Verify identities, Exchange cryptographic information, Create encryption keys
         
@@ -664,9 +690,9 @@ Step 3: Certificate
 Step 4: Certificate Verification
 
 The browser verifies:
-    Is the certificate valid?
-    Is it expired?
-    Is it signed by a trusted Certificate Authority (CA)?
+- Is the certificate valid?
+- Is it expired?
+- Is it signed by a trusted Certificate Authority (CA)?
 
 If verification fails:
     Warning:
@@ -688,9 +714,9 @@ Step 6: Secure Communication
 
 What Happens After the Handshake?   
 Normal HTTP requests continue:
-    GET /index.html
-    POST /login
-    GET /profile
+- GET /index.html
+- POST /login
+- GET /profile
 
 The difference is:
     Everything is encrypted.
@@ -707,7 +733,7 @@ Real-World Example
 
 --------------------------------------------------------------------------------------------
 
-                Common HTTPS/TLS Attacks
+## Common HTTPS/TLS Attacks
 1. SSL Stripping
 What is it? 
     An attacker downgrades: 
@@ -739,15 +765,15 @@ Attack Goal
 
 -----------------------------------------------------------------------------------------
 
-            Why HTTPS is Important
+## Why HTTPS is Important
 
 Without HTTPS: Passwords can be stolen, Sessions can be hijacked, Data can be modified, Privacy is lost.
 
 With HTTPS: Data is encrypted, Website identity is verified, Data integrity is protected.
 
-##############################################################################################################
+#########################################################################################################
 
-            Common Protocols: SSH, SMTP, FTP, and SNMP
+# Common Protocols: SSH, SMTP, FTP, and SNMP
 
 What are Network Protocols?
     A network protocol is a set of rules that allows devices to communicate with each other over a network.
@@ -756,7 +782,7 @@ Different protocols are designed for different purposes, such as remote access, 
 
 ---------------------------------------------------------------
 
-        SSH (Secure Shell)
+##  SSH (Secure Shell)
 
 What is SSH?
     SSH (Secure Shell) is a protocol used to securely access and manage remote systems over a network.
@@ -774,8 +800,7 @@ Security Benefits : Encrypted communication, Secure authentication, Protection a
 Common Attacks : Brute Force Attacks, Credential Theft, SSH Key Theft
 
 ----------------------------------------------------------------------
-
-        SMTP (Simple Mail Transfer Protocol)
+##  SMTP (Simple Mail Transfer Protocol)
 
 What is SMTP?
     SMTP (Simple Mail Transfer Protocol) is used to send emails between mail servers and from email clients to mail servers.
@@ -793,7 +818,7 @@ Common Attacks: SMTP Spoofing, Open Relay Abuse, Phishing Campaigns
 
 ------------------------------------------------------------------------
 
-            FTP (File Transfer Protocol)
+##  FTP (File Transfer Protocol)
 What is FTP?
     FTP (File Transfer Protocol) is used to transfer files between a client and a server.
 
@@ -811,7 +836,7 @@ Common Attacks: Credential Sniffing, Brute Force Attacks, File Manipulation
 
 --------------------------------------------------------------------------
 
-        SNMP (Simple Network Management Protocol)
+##  SNMP (Simple Network Management Protocol)
 What is SNMP?
     SNMP (Simple Network Management Protocol) is used to monitor and manage network devices.
 
@@ -827,7 +852,7 @@ Common Attacks: Information Gathering, SNMP Enumeration, Community String Attack
 
 -------------------------------------------------------------------------
 
-            Security Perspective
+##  Security Perspective
 
         | Protocol | Main Risk              |
         | -------- | ---------------------- |
@@ -837,9 +862,9 @@ Common Attacks: Information Gathering, SNMP Enumeration, Community String Attack
         | SNMP     | Information Disclosure |
 
 
-##############################################################################
+#########################################################################################################
 
-                            Wireshark: Capturing and Analyzing Live Traffic
+#  Wireshark: Capturing and Analyzing Live Traffic
 What is Wireshark?
     Wireshark is a network protocol analyzer that allows you to capture and inspect network traffic in real time.
 
@@ -847,7 +872,7 @@ It shows the packets traveling across a network and helps you understand what de
 
 Wireshark helps you: Troubleshoot network problems, Analyze network performance, Learn how protocols work, Investigate security incidents, Detect suspicious network activity.
 
-How Packet Capturing Works
+## How Packet Capturing Works
 
         Your Device
             |
@@ -864,10 +889,10 @@ Wireshark listens to a network interface and records packets that pass through i
 
 -----------------------------------------------------------------------------
 
-                    Capturing Live Traffic
+##  Capturing Live Traffic
 
 
-    Step 1: Open Wireshark
+        Step 1: Open Wireshark
 
 When Wireshark starts, it displays available network interfaces.
 
@@ -901,7 +926,7 @@ The captured packets remain available for analysis.
 
 ---------------------------------------------------------------------------
 
-                        Understanding the Wireshark Interface
+##  Understanding the Wireshark Interface
 Packet List Pane: Shows all captured packets.
 Example:
 
@@ -918,7 +943,7 @@ Packet Bytes Pane: Shows the raw packet data in hexadecimal and ASCII format.
 
 -----------------------------------------------------------------------------
 
-                    Common Filters
+##  Common Filters
 
 Filters help you focus on specific traffic.
 
@@ -932,28 +957,28 @@ Traffic on Port 22 (SSH): tcp.port == 22
 
                 Analyzing Common Protocols
   
-    DNS
+##  DNS
 
 Example: Query: google.com, Response: 142.250.x.x
 Useful for: DNS troubleshooting, Detecting DNS-based attacks
 
-    TCP
+##  TCP
 
 Look for: SYN, SYN-ACK, ACK
 to observe the TCP handshake.
 Useful for: Connection troubleshooting, Detecting SYN flood attacks
 
-    HTTP
+##  HTTP
 
 Example: GET /index.html
 Useful for: Understanding web requests, Learning HTTP communication
 
-    HTTPS
+##  HTTPS
 
 Traffic is encrypted.
 You can still see: Source IP, Destination IP, Ports, TLS Handshake information
 
-                Security Use Cases
+##  Security Use Cases
 
     Detecting Port Scans
 
@@ -983,14 +1008,14 @@ Look for: Unknown IP addresses, Repeated outbound connections, Suspicious DNS re
 
 ------------------------------------------------------------------------------
 
-                                Common Challenges
+##  Common Challenges
 Large Packet Captures: Busy networks can generate thousands of packets per second. Use filters to reduce noise.
 
 Encrypted Traffic: HTTPS traffic is encrypted. You can see metadata but not the actual content.
 
 Capturing the Wrong Interface: If no packets appear, verify that the correct network interface is selected.
 
-#############################################################################
+#########################################################################################################
 
 
 
